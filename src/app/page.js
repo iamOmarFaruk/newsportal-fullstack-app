@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Hero from "@/app/components/Hero";
 import CustomizableSection from "@/app/components/CustomizableSection";
+import ExclusiveInsights from "@/app/components/ExclusiveInsights";
+
+
+
 export default function Home () {
 const trendingNews = [
   {
@@ -50,6 +54,34 @@ const editorsPicks = [
   },
 ];
 
+  
+
+const articles = [
+  {
+    image:
+      "https://images.pexels.com/photos/206557/pexels-photo-206557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "Exploring the Future of AI",
+    category: "Tech",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/206557/pexels-photo-206557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "Top Travel Destinations for 2025",
+    category: "Travel",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/206557/pexels-photo-206557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "Design Trends for Modern Homes",
+    category: "Interior",
+  },
+  {
+    image:
+      "https://images.pexels.com/photos/206557/pexels-photo-206557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    title: "The Rise of Electric Vehicles",
+    category: "Auto",
+  },
+];
 
 
 
@@ -64,6 +96,11 @@ const editorsPicks = [
       <CustomizableSection
         sectionTitle="Editor's Picks"
         articles={editorsPicks}
+      />
+
+      <ExclusiveInsights
+        sectionTitle="Exclusive Insights"
+        articles={articles}
       />
     </>
   );
