@@ -63,31 +63,30 @@ const Hero = () => {
         <div className="col-span-2 grid grid-cols-2 gap-4">
           {sideNews.map((news, index) => (
             <div key={index} className="relative rounded-lg overflow-hidden group">
-              <div className="relative w-full h-44">
+              <div className="relative w-full h-full">
                 <Image
                   src={news.image}
                   alt={news.title}
                   layout="fill"
-                  objectFit="cover"
-                  className="group-hover:scale-110 transition-transform duration-500"
+                  objectFit="cover" // Ensures the image covers the container
+                  className="scale-100 group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent group-hover:from-black/80 transition-all duration-700 p-4 flex flex-col justify-end">
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent group-hover:from-black/95 group-hover:via-black/70 transition-all duration-700 p-4 flex flex-col justify-end">
                 <h3 className="text-white text-base font-semibold group-hover:translate-y-0 transition-all duration-300">
                   {news.title}
                 </h3>
-               
+
                 <div className="flex items-center mt-4 group-hover:translate-y-0 transition-all duration-500">
                   <div className="inline-block h-3 w-1 bg-red-600 mr-2"></div>
                   <span className="text-gray-100 text-sm">{news.category}</span>
                 </div>
-
-
-
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
